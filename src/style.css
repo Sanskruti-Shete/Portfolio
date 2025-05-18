@@ -549,4 +549,15 @@ footer {
   .music-modal button:hover {
     opacity: 0.9;
   }
+  #tech-cube {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+  }
+  
+  canvas#three-cube {
+    width: 300px;
+    height: 300px;
+  }
   

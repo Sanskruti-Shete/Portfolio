@@ -1,6 +1,8 @@
 import './style.css';
 import Typed from 'typed.js';
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
   new Typed('#typing-name', {
     strings: ["Sanskruti Shete", "Frontend Developer", "Creative Designer"],
@@ -61,3 +63,37 @@ yesBtn.addEventListener('click', () => {
 noBtn.addEventListener('click', () => {
   modal.style.display = 'none';
 });
+
+import * as THREE from 'three';
+
+const canvas = document.getElementById('three-cube');
+if (canvas) {
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+  renderer.setSize(300, 300);
+
+  const geometry = new THREE.BoxGeometry(2, 2, 2);
+  const loader = new THREE.TextureLoader();
+
+  const materials = [
+    new THREE.MeshBasicMaterial({ map: loader.load('/images/html.png') }),
+    new THREE.MeshBasicMaterial({ map: loader.load('/images/css.png') }),
+    new THREE.MeshBasicMaterial({ map: loader.load('/images/javascript.png') }),
+    new THREE.MeshBasicMaterial({ map: loader.load('/images/react.png') }),
+    new THREE.MeshBasicMaterial({ map: loader.load('/images/node.png') }),
+    new THREE.MeshBasicMaterial({ map: loader.load('/images/mongodb.png') }),
+  ];
+
+  const cube = new THREE.Mesh(geometry, materials);
+  scene.add(cube);
+  camera.position.z = 5;
+
+  function animate() {
+    requestAnimationFrame(animate);
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+    renderer.render(scene, camera);
+  }
+  animate();
+}
