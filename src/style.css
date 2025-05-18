@@ -425,4 +425,15 @@ footer {
       transform: translateX(-50%);
     }
   }
-    
+  .custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #a78bfa;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    mix-blend-mode: difference; /* optional for cool effect */
+  }
+  
