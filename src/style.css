@@ -436,4 +436,41 @@ footer {
     transition: transform 0.1s ease;
     mix-blend-mode: difference; /* optional for cool effect */
   }
+  .tech-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+    font-family: monospace;
+  }
   
+  .tech-background span {
+    position: absolute;
+    color: rgba(167, 139, 250, 0.4); /* brighter lavender */
+    font-size: 1rem;
+    animation: floatWords 20s linear infinite;
+    white-space: nowrap;
+    text-shadow: 0 0 5px rgba(167, 139, 250, 0.6); /* soft glow */
+    font-weight: bold;
+  }
+  
+  
+  /* Floating animation */
+  @keyframes floatWords {
+    0% {
+      transform: translateY(100vh) translateX(0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) translateX(50px);
+      opacity: 0;
+    }
+  }
+    
