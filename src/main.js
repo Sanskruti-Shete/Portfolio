@@ -64,36 +64,81 @@ noBtn.addEventListener('click', () => {
   modal.style.display = 'none';
 });
 
+import './style.css';
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const canvas = document.getElementById('three-cube');
+
 if (canvas) {
   const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-  renderer.setSize(300, 300);
+  const camera = new THREE.PerspectiveCamera(
+    45,
+    canvas.clientWidth / canvas.clientHeight,
+    0.1,
+    1000
+  );
+  camera.position.set(0, 1, 8); // farther view
 
-  const geometry = new THREE.BoxGeometry(2, 2, 2);
-  const loader = new THREE.TextureLoader();
+  const renderer = new THREE.WebGLRenderer({
+    canvas,
+    alpha: true,
+    antialias: true,
+  });
+  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
 
-  const materials = [
-    new THREE.MeshBasicMaterial({ map: loader.load('/images/html.png') }),
-    new THREE.MeshBasicMaterial({ map: loader.load('/images/css.png') }),
-    new THREE.MeshBasicMaterial({ map: loader.load('/images/javascript.png') }),
-    new THREE.MeshBasicMaterial({ map: loader.load('/images/react.png') }),
-    new THREE.MeshBasicMaterial({ map: loader.load('/images/node.png') }),
-    new THREE.MeshBasicMaterial({ map: loader.load('/images/mongodb.png') }),
-  ];
+  // Lighting
+  const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
+  scene.add(ambientLight);
 
-  const cube = new THREE.Mesh(geometry, materials);
-  scene.add(cube);
-  camera.position.z = 5;
+  const pointLight = new THREE.PointLight(0xffffff, 1);
+  pointLight.position.set(10, 10, 10);
+  scene.add(pointLight);
+
+  // OrbitControls
+  const controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true;
+  controls.enableZoom = false;
+  controls.enablePan = false;
+  controls.autoRotate = true;         // <-- Enable auto-rotation
+  controls.autoRotateSpeed = 1;       // <-- Speed of rotation
+  controls.minPolarAngle = Math.PI / 3;
+  controls.maxPolarAngle = Math.PI / 1.8;
+  controls.target.set(0, 1, 0);
+  controls.update();
+
+  // Load model
+  const loader = new GLTFLoader();
+  loader.load(
+    '/models/dev-setup.glb',
+    (gltf) => {
+      const model = gltf.scene;
+      model.scale.set(1, 1, 1);
+      model.position.set(0, -1, 0);
+      scene.add(model);
+    },
+    undefined,
+    (error) => {
+      console.error('Error loading model:', error);
+    }
+  );
 
   function animate() {
     requestAnimationFrame(animate);
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    controls.update(); // includes auto-rotation
     renderer.render(scene, camera);
   }
+
   animate();
+
+  // Resize support
+  window.addEventListener('resize', () => {
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+    camera.aspect = width / height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(width, height);
+  });
 }
