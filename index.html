@@ -9,6 +9,13 @@
 <body>
     <div class="custom-cursor"></div>
     <div class="tech-background"></div>
+    <div id="music-prompt" class="music-modal">
+        <div class="music-modal-content">
+          <p>Would you like to play background music?</p>
+          <button id="music-yes">Yes 🎵</button>
+          <button id="music-no">No Thanks</button>
+        </div>
+      </div>      
   <div id="app">
     <div class="container">
       <!-- Header -->
@@ -42,10 +49,16 @@
       </section>
       <h1><span id="typing-name"></span></h1>
       <!-- Quote Section -->
-      <div class="quote">
+      <section class="quote">
+        <div class="quote-inner">
+          <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#a78bfa" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h.01M15 7h.01M6.75 12a4.5 4.5 0 004.5 4.5h.75m6-4.5a4.5 4.5 0 01-4.5 4.5h-.75m-6.75 0a4.5 4.5 0 004.5-4.5V6.75A.75.75 0 009 6h-.75A4.5 4.5 0 004.5 10.5v1.5zm12 0a4.5 4.5 0 00-4.5-4.5H15a.75.75 0 00-.75.75v4.5z" />
+          </svg>
           <p class="quote-text">I won't be impressed with technology until I can download food.</p>
-          <p class="quote-author">- You Know Who</p>
-      </div>
+          <p class="quote-author">— You Know Who</p>
+        </div>
+      </section>
+      
 
       <!-- Projects Section -->
       <section id="projects">
