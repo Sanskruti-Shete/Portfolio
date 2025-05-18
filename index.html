@@ -1,314 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sanskruti's Portfolio</title>
-  <link rel="stylesheet" href="/src/style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sanskruti's Portfolio</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
     <div class="custom-cursor"></div>
     <div class="tech-background"></div>
     <div id="music-prompt" class="music-modal">
-        <div class="music-modal-content">
-          <p>Would you like to play background music?</p>
-          <button id="music-yes">Yes 🎵</button>
-          <button id="music-no">No Thanks</button>
-        </div>
-      </div>      
-  <div id="app">
-    <div class="container">
-      <!-- Header -->
-      <header>
+      <div class="music-modal-content">
+        <p>Would you like to play background music?</p>
+        <button id="music-yes">Yes 🎵</button>
+        <button id="music-no">No Thanks</button>
+      </div>
+    </div>
+    <div id="app">
+      <div class="container">
+        <!-- Header -->
+        <header>
           <div class="logo">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-                  <path d="M2 17l10 5 10-5"/>
-                  <path d="M2 12l10 5 10-5"/>
-              </svg>
-              <span>Sanskruti · Shete</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#a78bfa"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+            <span>Sanskruti · Shete</span>
           </div>
           <div class="nav-links">
-              <a href="#home">Home</a>
-              <a href="#projects">Projects</a>
-              <a href="#skills">Follow Me</a>
-              <a href="#contact">Contact</a>
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Follow Me</a>
+            <a href="#contact">Contact</a>
           </div>
-      </header>
+        </header>
 
-      <!-- Hero Section -->
-      <section class="hero" id="home">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
           <div class="hero-content">
-              <h1>Sanskruti is a <span>web designer</span> and <span>front-end developer</span></h1>
-              <p>I design & build the websites and applications people love to use & interact with.</p>
-              <a href="#contact" class="btn">Contact Me →</a>
+            <h1>
+              Sanskruti is a <span>web designer</span> and
+              <span>front-end developer</span>
+            </h1>
+            <p>
+              I design & build the websites and applications people love to use
+              & interact with.
+            </p>
+            <a href="#contact" class="btn">Contact Me →</a>
           </div>
-          <div class="hero-image">
+          <div class="about-image">
             <img src="/images/img1.png" alt="..." />
           </div>
-      </section>
-      <h1><span id="typing-name"></span></h1>
-      
-      
-      
-      <!-- Quote Section -->
-      <section class="quote">
-        <div class="quote-inner">
-          <svg class="quote-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="#a78bfa" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M9 7h.01M15 7h.01M6.75 12a4.5 4.5 0 004.5 4.5h.75m6-4.5a4.5 4.5 0 01-4.5 4.5h-.75m-6.75 0a4.5 4.5 0 004.5-4.5V6.75A.75.75 0 009 6h-.75A4.5 4.5 0 004.5 10.5v1.5zm12 0a4.5 4.5 0 00-4.5-4.5H15a.75.75 0 00-.75.75v4.5z" />
-          </svg>
-          <p class="quote-text">I won't be impressed with technology until I can download food.</p>
-          <p class="quote-author">— You Know Who</p>
-        </div>
-      </section>
-      
+        </section>
+        <h1><span id="typing-name"></span></h1>
 
-      <!-- Projects Section -->
-      <section id="projects">
+        <!-- Quote Section -->
+        <section class="quote">
+          <div class="quote-inner">
+            <svg
+              class="quote-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="#a78bfa"
+              stroke-width="1.5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 7h.01M15 7h.01M6.75 12a4.5 4.5 0 004.5 4.5h.75m6-4.5a4.5 4.5 0 01-4.5 4.5h-.75m-6.75 0a4.5 4.5 0 004.5-4.5V6.75A.75.75 0 009 6h-.75A4.5 4.5 0 004.5 10.5v1.5zm12 0a4.5 4.5 0 00-4.5-4.5H15a.75.75 0 00-.75.75v4.5z"
+              />
+            </svg>
+            <p class="quote-text">
+              I won't be impressed with technology until I can download food.
+            </p>
+            <p class="quote-author">— You Know Who</p>
+          </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
           <h2 class="section-header">projects</h2>
           <div class="projects-grid">
-              <!-- Project 1 -->
-              <div class="project-card">
-                  <div class="project-image chatboxes"></div>
-                  <div class="project-details">
-                      <p class="project-type">Web App Project</p>
-                      <h3 class="project-title">ChatNodeJS</h3>
-                      <p class="project-description">Node.js-based messaging app</p>
-                      <div class="project-links">
-                          <a href="#">Live ≫</a>
-                          <a href="#">Source ≫</a>
-                      </div>
-                  </div>
+            <!-- Project 1 -->
+            <div class="project-card">
+              <div class="project-image chatboxes"></div>
+              <div class="project-details">
+                <p class="project-type">Web App Project</p>
+                <h3 class="project-title">ChatNodeJS</h3>
+                <p class="project-description">Node.js-based messaging app</p>
+                <div class="project-links">
+                  <a href="#">Live ≫</a>
+                  <a href="#">Source ≫</a>
+                </div>
               </div>
+            </div>
 
-              <!-- Project 2 -->
-              <div class="project-card">
-                  <div class="project-image projects"></div>
-                  <div class="project-details">
-                      <p class="project-type">Web Application Project</p>
-                      <h3 class="project-title">Projects</h3>
-                      <p class="project-description">Project management tool</p>
-                      <div class="project-links">
-                          <a href="#">Live ≫</a>
-                      </div>
-                  </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+              <div class="project-image projects"></div>
+              <div class="project-details">
+                <p class="project-type">Web Application Project</p>
+                <h3 class="project-title">Projects</h3>
+                <p class="project-description">Project management tool</p>
+                <div class="project-links">
+                  <a href="#">Live ≫</a>
+                </div>
               </div>
+            </div>
 
-              <!-- Project 3 -->
-              <div class="project-card">
-                  <div class="project-image kahoot"></div>
-                  <div class="project-details">
-                      <p class="project-type">Chrome Extension</p>
-                      <h3 class="project-title">Kahoot Answers Viewer</h3>
-                      <p class="project-description">Get answers to your kahoot quiz</p>
-                      <div class="project-links">
-                          <a href="#">Live ≫</a>
-                      </div>
-                  </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+              <div class="project-image kahoot"></div>
+              <div class="project-details">
+                <p class="project-type">Chrome Extension</p>
+                <h3 class="project-title">Kahoot Answers Viewer</h3>
+                <p class="project-description">
+                  Get answers to your kahoot quiz
+                </p>
+                <div class="project-links">
+                  <a href="#">Live ≫</a>
+                </div>
               </div>
+            </div>
           </div>
-      </section>
+        </section>
 
-      <!-- Skills Section -->
-      <section id="skills">
+        <!-- Skills Section -->
+        <section id="skills">
           <h2 class="section-header">skills</h2>
           <div class="skills-grid">
-              <!-- Languages -->
-              <div class="skills-category">
-                  <h3>Languages</h3>
-                  <div class="skills-list">
-                      <span class="skill-tag">Java</span>
-                      <span class="skill-tag">Python</span>
-                      <span class="skill-tag">JavaScript</span>
-                      <span class="skill-tag">C</span>
-                      <span class="skill-tag">C++</span>
-                  </div>
+            <!-- Languages -->
+            <div class="skills-category">
+              <h3>Languages</h3>
+              <div class="skills-list">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">C</span>
+                <span class="skill-tag">C++</span>
               </div>
+            </div>
 
-              <!-- Frameworks -->
-              <div class="skills-category">
-                  <h3>Frameworks</h3>
-                  <div class="skills-list">
-                      <span class="skill-tag">React.js</span>
-                      <span class="skill-tag">Bootstrap</span>
-                      <span class="skill-tag">Express.js</span>
-                      <span class="skill-tag">Tailwind</span>
-                  </div>
+            <!-- Frameworks -->
+            <div class="skills-category">
+              <h3>Frameworks</h3>
+              <div class="skills-list">
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Bootstrap</span>
+                <span class="skill-tag">Express.js</span>
+                <span class="skill-tag">Tailwind</span>
               </div>
+            </div>
 
-              <!-- Tools -->
-              <div class="skills-category">
-                  <h3>Tools</h3>
-                  <div class="skills-list">
-                      <span class="skill-tag">GitHub</span>
-                      <span class="skill-tag">VS Code</span>
-                      <span class="skill-tag">Figma</span>
-                      <span class="skill-tag">Linux</span>
-                      <span class="skill-tag">Font Awesome</span>
-                  </div>
+            <!-- Tools -->
+            <div class="skills-category">
+              <h3>Tools</h3>
+              <div class="skills-list">
+                <span class="skill-tag">GitHub</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Font Awesome</span>
               </div>
+            </div>
 
-              <!-- Other -->
-              <div class="skills-category">
-                  <h3>Other</h3>
-                  <div class="skills-list">
-                      <span class="skill-tag">UI/UX</span>
-                      <span class="skill-tag">EJS</span>
-                  </div>
+            <!-- Other -->
+            <div class="skills-category">
+              <h3>Other</h3>
+              <div class="skills-list">
+                <span class="skill-tag">UI/UX</span>
+                <span class="skill-tag">EJS</span>
               </div>
+            </div>
 
-              <!-- Databases -->
-              <div class="skills-category">
-                  <h3>Databases</h3>
-                  <div class="skills-list">
-                      <span class="skill-tag">SQL Lite</span>
-                      <span class="skill-tag">MySQL</span>
-                      <span class="skill-tag">MongoDB</span>
-                  </div>
+            <!-- Databases -->
+            <div class="skills-category">
+              <h3>Databases</h3>
+              <div class="skills-list">
+                <span class="skill-tag">SQL Lite</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">MongoDB</span>
               </div>
+            </div>
           </div>
-      </section><br>
-      <div class="tech-marquee">
-        <div class="tech-track">
-          <span><img src="/logos/html.svg" alt="HTML" /></span>
-          <span><img src="/logos/css.svg" alt="CSS" /></span>
-          <span><img src="/logos/javascript.svg" alt="JavaScript" /></span>
-          <span><img src="/logos/react.svg" alt="React" /></span>
-          <span><img src="/logos/nodejs.svg" alt="Node.js" /></span>
-          <span><img src="/logos/mongodb.svg" alt="MongoDB" /></span>
-          <span><img src="/logos/git.svg" alt="Git" /></span>
-          <span><img src="/logos/figma.svg" alt="Figma" /></span>
-          <span><img src="/logos/tailwindcss.svg" alt="Tailwind" /></span>
-          <span><img src="/logos/bootstrap.svg" alt="Bootstrap" /></span>
-          <span><img src="/logos/java.svg" alt="Java" /></span>
-          <span><img src="/logos/python.svg" alt="Python" /></span>
-          <span><img src="/logos/mysql.svg" alt="MySQL" /></span>
-          <span><img src="/logos/cplusplus.svg" alt="C++" /></span>
-          <span><img src="/logos/linux.svg" alt="Linux" /></span>
-      
-          <!-- Duplicate for infinite loop -->
-          <span><img src="/logos/html.svg" alt="HTML" /></span>
-          <span><img src="/logos/css.svg" alt="CSS" /></span>
-          <span><img src="/logos/javascript.svg" alt="JavaScript" /></span>
-          <span><img src="/logos/react.svg" alt="React" /></span>
-          <span><img src="/logos/nodejs.svg" alt="Node.js" /></span>
-          <span><img src="/logos/mongodb.svg" alt="MongoDB" /></span>
-          <span><img src="/logos/git.svg" alt="Git" /></span>
-          <span><img src="/logos/figma.svg" alt="Figma" /></span>
-          <span><img src="/logos/tailwindcss.svg" alt="Tailwind" /></span>
-          <span><img src="/logos/bootstrap.svg" alt="Bootstrap" /></span>
-          <span><img src="/logos/java.svg" alt="Java" /></span>
-          <span><img src="/logos/python.svg" alt="Python" /></span>
-          <span><img src="/logos/mysql.svg" alt="MySQL" /></span>
-          <span><img src="/logos/cplusplus.svg" alt="C++" /></span>
-          <span><img src="/logos/linux.svg" alt="Linux" /></span>
-        </div>
-      </div>
-      
+        </section>
+        <br />
+        <div class="tech-marquee">
+          <div class="tech-track">
+            <span><img src="/logos/html.svg" alt="HTML" /></span>
+            <span><img src="/logos/css.svg" alt="CSS" /></span>
+            <span><img src="/logos/javascript.svg" alt="JavaScript" /></span>
+            <span><img src="/logos/react.svg" alt="React" /></span>
+            <span><img src="/logos/nodejs.svg" alt="Node.js" /></span>
+            <span><img src="/logos/mongodb.svg" alt="MongoDB" /></span>
+            <span><img src="/logos/git.svg" alt="Git" /></span>
+            <span><img src="/logos/figma.svg" alt="Figma" /></span>
+            <span><img src="/logos/tailwindcss.svg" alt="Tailwind" /></span>
+            <span><img src="/logos/bootstrap.svg" alt="Bootstrap" /></span>
+            <span><img src="/logos/java.svg" alt="Java" /></span>
+            <span><img src="/logos/python.svg" alt="Python" /></span>
+            <span><img src="/logos/mysql.svg" alt="MySQL" /></span>
+            <span><img src="/logos/cplusplus.svg" alt="C++" /></span>
+            <span><img src="/logos/linux.svg" alt="Linux" /></span>
 
-      <!-- About Section -->
-      <section class="about">
+            <!-- Duplicate for infinite loop -->
+            <span><img src="/logos/html.svg" alt="HTML" /></span>
+            <span><img src="/logos/css.svg" alt="CSS" /></span>
+            <span><img src="/logos/javascript.svg" alt="JavaScript" /></span>
+            <span><img src="/logos/react.svg" alt="React" /></span>
+            <span><img src="/logos/nodejs.svg" alt="Node.js" /></span>
+            <span><img src="/logos/mongodb.svg" alt="MongoDB" /></span>
+            <span><img src="/logos/git.svg" alt="Git" /></span>
+            <span><img src="/logos/figma.svg" alt="Figma" /></span>
+            <span><img src="/logos/tailwindcss.svg" alt="Tailwind" /></span>
+            <span><img src="/logos/bootstrap.svg" alt="Bootstrap" /></span>
+            <span><img src="/logos/java.svg" alt="Java" /></span>
+            <span><img src="/logos/python.svg" alt="Python" /></span>
+            <span><img src="/logos/mysql.svg" alt="MySQL" /></span>
+            <span><img src="/logos/cplusplus.svg" alt="C++" /></span>
+            <span><img src="/logos/linux.svg" alt="Linux" /></span>
+          </div>
+        </div>
+
+        <!-- About Section -->
+        <section class="about">
           <div class="about-image">
             <img src="/images/img2.png" alt="..." />
           </div>
           <div class="about-content">
-              <h2>about-me</h2>
-              <p>Hello, I'm Sanskruti!</p>
-              <p>I'm a self-taught frontend developer based in Chennai, India specializing in building exceptional digital experiences that combine user-centric design with modern web technologies.</p>
-              <p>Striving to constantly improve my knowledge base, I actively pursue the latest design and development trends to stay ahead of the curve.</p>
+            <h2>about-me</h2>
+            <p>Hello, I'm Sanskruti!</p>
+            <p>
+              I'm a self-taught frontend developer based in Chennai, India
+              specializing in building exceptional digital experiences that
+              combine user-centric design with modern web technologies.
+            </p>
+            <p>
+              Striving to constantly improve my knowledge base, I actively
+              pursue the latest design and development trends to stay ahead of
+              the curve.
+            </p>
           </div>
-      </section>
-      <div class="fun-fact-box">
-            <p id="fun-fact-text">Click below to learn a fun fact about me!</p>
-            <button id="fun-fact-btn">Show Fun Fact 🎉</button>
+        </section>
+        <div class="fun-fact-box">
+          <p id="fun-fact-text">Click below to learn a fun fact about me!</p>
+          <button id="fun-fact-btn">Show Fun Fact 🎉</button>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+          <h2 class="section-header">contacts</h2>
+          <p>
+            I'm currently available for freelance opportunities. Reach out if
+            you have any cool project or question, let's collaborate!
+          </p>
+
+          <div class="contact-row">
+            <!-- Contact Info Box -->
+            <div class="contact-info">
+              <div class="contact-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="#a78bfa"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  ></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>shetesanskruti066@gmail.com</span>
+              </div>
+              <div class="contact-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="#a78bfa"
+                >
+                  <path
+                    d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"
+                  />
+                </svg>
+                <span>sss_potterhead</span>
+              </div>
             </div>
 
-      <!-- Contact Section -->
-      <section id="contact" class="contact">
-  <h2 class="section-header">contacts</h2>
-  <p>
-    I'm currently available for freelance opportunities. Reach out if you have any cool project or question, let's collaborate!
-  </p>
+            <!-- Marquee Box -->
+            <div class="contact-marquee-box">
+              <div class="contact-marquee-track">
+                <span>Web Design</span>
+                <span>Frontend Development</span>
+                <span>React.js</span>
+                <span>Creative UI/UX</span>
+                <span>Responsive Layouts</span>
+                <span>Performance Optimization</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Portfolio Projects</span>
+                <!-- Repeat for smooth looping -->
+                <span>Web Design</span>
+                <span>Frontend Development</span>
+                <span>React.js</span>
+                <span>Creative UI/UX</span>
+                <span>Responsive Layouts</span>
+                <span>Performance Optimization</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Portfolio Projects</span>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  <div class="contact-row">
-    <!-- Contact Info Box -->
-    <div class="contact-info">
-      <div class="contact-item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg>
-        <span>shetesanskruti066@gmail.com</span>
-      </div>
-      <div class="contact-item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#a78bfa">
-          <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
-        </svg>
-        <span>sss_potterhead</span>
-      </div>
-    </div>
+        <section id="tech-cube">
+          <canvas id="three-cube"></canvas>
+        </section>
 
-    <!-- Marquee Box -->
-    <div class="contact-marquee-box">
-      <div class="contact-marquee-track">
-        <span>Web Design</span>
-        <span>Frontend Development</span>
-        <span>React.js</span>
-        <span>Creative UI/UX</span>
-        <span>Responsive Layouts</span>
-        <span>Performance Optimization</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Portfolio Projects</span>
-        <!-- Repeat for smooth looping -->
-        <span>Web Design</span>
-        <span>Frontend Development</span>
-        <span>React.js</span>
-        <span>Creative UI/UX</span>
-        <span>Responsive Layouts</span>
-        <span>Performance Optimization</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Portfolio Projects</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-      <section id="tech-cube">
-  <canvas id="three-cube"></canvas>
-</section>
-
-
-      <!-- Footer -->
-      <footer>
+        <!-- Footer -->
+        <footer>
           <div class="logo">
-              <span>Sanskruti Shete · shetesanskruti066@gmail.com</span>
+            <span>Sanskruti Shete · shetesanskruti066@gmail.com</span>
           </div>
           <div class="social-media">
-              <h3>Media</h3>
-              <a href="#" title="Twitter">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#a78bfa">
-                      <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                  </svg>
-              </a>
-              <a href="https://www.linkedin.com/in/sanskruti-shete-02aba1275" title="LinkedIn">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#a78bfa">
-                      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                  </svg>
-              </a>
-              <a href="https://github.com/Sanskruti-Shete" title="GitHub">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#a78bfa">
-                      <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                  </svg>
-              </a>
+            <h3>Media</h3>
+            <a href="#" title="Twitter">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="#a78bfa"
+              >
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/sanskruti-shete-02aba1275"
+              title="LinkedIn"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="#a78bfa"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <a href="https://github.com/Sanskruti-Shete" title="GitHub">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="#a78bfa"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+            </a>
           </div>
-      </footer>
-  </div>
-  </div>
-  <script type="module" src="/src/main.js"></script>
-</body>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

@@ -1,9 +1,11 @@
 import './style.css';
 import Typed from 'typed.js';
-
-
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Typing effect
   new Typed('#typing-name', {
     strings: ["Sanskruti Shete", "Frontend Developer", "Creative Designer"],
     typeSpeed: 50,
@@ -11,154 +13,114 @@ document.addEventListener("DOMContentLoaded", () => {
     backDelay: 1500,
     loop: true,
   });
-});
-const cursor = document.querySelector('.custom-cursor');
 
-document.addEventListener('mousemove', (e) => {
-  cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
-});
-import './style.css';
-
-const words = [
-  'HTML', 'CSS', 'JavaScript', 'TypeScript',
-  'React', 'Node.js', 'MongoDB', 'Express',
-  'Git', 'GitHub', 'Figma', 'Tailwind',
-  'Bootstrap', 'Vite', 'Python', 'Java'
-];
-
-const container = document.querySelector('.tech-background');
-
-function createFloatingWord() {
-  const span = document.createElement('span');
-  span.textContent = words[Math.floor(Math.random() * words.length)];
-  
-  span.style.left = `${Math.random() * 100}%`;
-  span.style.fontSize = `${Math.random() * 1 + 0.7}rem`;
-  span.style.animationDuration = `${10 + Math.random() * 20}s`;
-
-  container.appendChild(span);
-
-  // Remove element after animation
-  setTimeout(() => {
-    container.removeChild(span);
-  }, 30000);
-}
-
-// Create words repeatedly
-setInterval(createFloatingWord, 500);
-
-// Create audio element
-const audio = new Audio('/background.mp3');
-audio.loop = true;
-
-const modal = document.getElementById('music-prompt');
-const yesBtn = document.getElementById('music-yes');
-const noBtn = document.getElementById('music-no');
-
-yesBtn.addEventListener('click', () => {
-  audio.play();
-  modal.style.display = 'none';
-});
-
-noBtn.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-import './style.css';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-
-const canvas = document.getElementById('three-cube');
-
-if (canvas) {
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(
-    45,
-    canvas.clientWidth / canvas.clientHeight,
-    0.1,
-    1000
-  );
-  camera.position.set(0, 1, 8); // farther view
-
-  const renderer = new THREE.WebGLRenderer({
-    canvas,
-    alpha: true,
-    antialias: true,
+  // Cursor
+  const cursor = document.querySelector('.custom-cursor');
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
   });
-  renderer.setSize(canvas.clientWidth, canvas.clientHeight);
-  renderer.setPixelRatio(window.devicePixelRatio);
 
-  // Lighting
-  const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
-  scene.add(ambientLight);
+  // Floating words
+  const words = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'MongoDB', 'Figma', 'Tailwind', 'Bootstrap', 'Git', 'Python', 'Java'];
+  const container = document.querySelector('.tech-background');
 
-  const pointLight = new THREE.PointLight(0xffffff, 1);
-  pointLight.position.set(10, 10, 10);
-  scene.add(pointLight);
+  function createFloatingWord() {
+    const span = document.createElement('span');
+    span.textContent = words[Math.floor(Math.random() * words.length)];
+    span.style.left = `${Math.random() * 100}%`;
+    span.style.fontSize = `${Math.random() * 1 + 0.7}rem`;
+    span.style.animationDuration = `${10 + Math.random() * 20}s`;
+    container.appendChild(span);
+    setTimeout(() => container.removeChild(span), 30000);
+  }
+  setInterval(createFloatingWord, 500);
 
-  // OrbitControls
-  const controls = new OrbitControls(camera, renderer.domElement);
-  controls.enableDamping = true;
-  controls.enableZoom = false;
-  controls.enablePan = false;
-  controls.autoRotate = true;         // <-- Enable auto-rotation
-  controls.autoRotateSpeed = 1;       // <-- Speed of rotation
-  controls.minPolarAngle = Math.PI / 3;
-  controls.maxPolarAngle = Math.PI / 1.8;
-  controls.target.set(0, 1, 0);
-  controls.update();
+  // Music modal
+  const audio = new Audio('/background.mp3');
+  audio.loop = true;
 
-  // Load model
-  const loader = new GLTFLoader();
-  loader.load(
-    '/models/dev-setup.glb',
-    (gltf) => {
-      const model = gltf.scene;
-      model.scale.set(1, 1, 1);
-      model.position.set(0, -1, 0);
-      scene.add(model);
-    },
-    undefined,
-    (error) => {
-      console.error('Error loading model:', error);
-    }
-  );
+  const modal = document.getElementById('music-prompt');
+  const yesBtn = document.getElementById('music-yes');
+  const noBtn = document.getElementById('music-no');
 
-  function animate() {
-    requestAnimationFrame(animate);
-    controls.update(); // includes auto-rotation
-    renderer.render(scene, camera);
+  if (yesBtn && noBtn && modal) {
+    yesBtn.addEventListener('click', () => {
+      audio.play();
+      modal.style.display = 'none';
+    });
+
+    noBtn.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
   }
 
-  animate();
+  // Fun Fact Button
+  const funFacts = [
+    "I once debugged an entire project with just console logs 😅",
+    "I'm a huge fan of Figma and spend hours perfecting UI.",
+    "Dark mode is my default for everything 🌙",
+    "I can spend hours just choosing the perfect font combo 🔤",
+    "I believe semicolons are optional… until they're not 🤓"
+  ];
+  const factBtn = document.getElementById("fun-fact-btn");
+  const factText = document.getElementById("fun-fact-text");
 
-  // Resize support
-  window.addEventListener('resize', () => {
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
-    camera.aspect = width / height;
-    camera.updateProjectionMatrix();
-    renderer.setSize(width, height);
-  });
-}
+  if (factBtn && factText) {
+    factBtn.addEventListener("click", () => {
+      const randomIndex = Math.floor(Math.random() * funFacts.length);
+      factText.textContent = funFacts[randomIndex];
+    });
+  }
 
-const funFacts = [
-  "I once debugged an entire project with just console logs 😅",
-  "I'm a huge fan of Figma and spend hours perfecting UI.",
-  "I can code faster with lo-fi music playing in the background 🎧",
-  "I once built a Chrome extension for fun!",
-  "Dark mode is my default for everything 🌙",
-  "I love organizing code like it’s a bookshelf 📚",
-  "My first website was built using Notepad and inline CSS 😄",
-  "I can spend hours just choosing the perfect font combo 🔤",
-  "I believe semicolons are optional… until they're not 🤓"
-];
+  
+  // Tech Cube Canvas (already working)
+  const cubeCanvas = document.getElementById('three-cube');
+  if (cubeCanvas) {
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, cubeCanvas.clientWidth / cubeCanvas.clientHeight, 0.1, 1000);
+    camera.position.set(0, 2, 7);
 
-const factBtn = document.getElementById("fun-fact-btn");
-const factText = document.getElementById("fun-fact-text");
+    const renderer = new THREE.WebGLRenderer({ canvas: cubeCanvas, alpha: true, antialias: true });
+    renderer.setSize(cubeCanvas.clientWidth, cubeCanvas.clientHeight);
+    renderer.setPixelRatio(window.devicePixelRatio);
 
-factBtn.addEventListener("click", () => {
-  const randomIndex = Math.floor(Math.random() * funFacts.length);
-  factText.textContent = funFacts[randomIndex];
+    scene.add(new THREE.AmbientLight(0xffffff, 1.2));
+    const pointLight = new THREE.PointLight(0xffffff, 1);
+    pointLight.position.set(10, 10, 10);
+    scene.add(pointLight);
+
+    const controls = new OrbitControls(camera, renderer.domElement);
+    controls.enableDamping = true;
+    controls.enableZoom = false;
+    controls.enablePan = false;
+    controls.autoRotate = true;
+    controls.autoRotateSpeed = 1;
+    controls.minPolarAngle = Math.PI / 3;
+    controls.maxPolarAngle = Math.PI / 1.8;
+    controls.target.set(0, 1, 0);
+    controls.update();
+
+    const loader = new GLTFLoader();
+    loader.load(
+      '/models/dev-setup.glb',
+      (gltf) => {
+        const model = gltf.scene;
+        model.scale.set(1, 1, 1);
+        model.position.set(0, -1, 0);
+        scene.add(model);
+      },
+      undefined,
+      (error) => {
+        console.error('Error loading model:', error);
+      }
+    );
+
+    function animate() {
+      requestAnimationFrame(animate);
+      controls.update();
+      renderer.render(scene, camera);
+    }
+
+    animate();
+  }
 });
