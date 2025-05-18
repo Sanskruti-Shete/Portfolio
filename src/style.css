@@ -382,3 +382,12 @@ footer {
         width: 100%;
     }
 }
+#typing-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a78bfa;
+    white-space: nowrap;
+    border-right: 2px solid #a78bfa;
+    overflow: hidden;
+  }
+  
