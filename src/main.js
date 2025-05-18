@@ -142,3 +142,23 @@ if (canvas) {
     renderer.setSize(width, height);
   });
 }
+
+const funFacts = [
+  "I once debugged an entire project with just console logs 😅",
+  "I'm a huge fan of Figma and spend hours perfecting UI.",
+  "I can code faster with lo-fi music playing in the background 🎧",
+  "I once built a Chrome extension for fun!",
+  "Dark mode is my default for everything 🌙",
+  "I love organizing code like it’s a bookshelf 📚",
+  "My first website was built using Notepad and inline CSS 😄",
+  "I can spend hours just choosing the perfect font combo 🔤",
+  "I believe semicolons are optional… until they're not 🤓"
+];
+
+const factBtn = document.getElementById("fun-fact-btn");
+const factText = document.getElementById("fun-fact-text");
+
+factBtn.addEventListener("click", () => {
+  const randomIndex = Math.floor(Math.random() * funFacts.length);
+  factText.textContent = funFacts[randomIndex];
+});
