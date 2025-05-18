@@ -390,4 +390,39 @@ footer {
     border-right: 2px solid #a78bfa;
     overflow: hidden;
   }
+  .tech-marquee {
+    width: 100%;
+    overflow: hidden;
+    background-color: #1a1a2e;
+    padding: 1rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
   
+  .tech-track {
+    display: flex;
+    width: max-content;
+    animation: scroll-left 20s linear infinite;
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  .tech-track span img {
+    height: 40px;
+    filter: brightness(1.5);
+    transition: transform 0.3s ease;
+  }
+  
+  .tech-track span img:hover {
+    transform: scale(1.2);
+  }
+  
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+    
