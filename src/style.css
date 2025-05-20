@@ -1075,3 +1075,20 @@ canvas#three-cube {
     text-align: left;
   }
 }
+
+/*Snake*/
+
+.github-snake-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem auto;
+  background-color: #0d1117;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(167, 139, 250, 0.1);
+}
+
+#github-snake {
+  image-rendering: pixelated;
+}
