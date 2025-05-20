@@ -672,6 +672,67 @@ canvas#three-cube {
   }
 }
 
+.experience {
+  margin: 4rem 0;
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  padding-left: 1.5rem;
+  border-left: 2px solid rgba(167, 139, 250, 0.2);
+}
+
+.experience-card {
+  background-color: rgba(30, 30, 46, 0.5);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  padding: 1.25rem;
+  border-radius: 8px;
+  position: relative;
+}
+
+.experience-card::before {
+  content: '';
+  width: 14px;
+  height: 14px;
+  background-color: #a78bfa;
+  border-radius: 50%;
+  position: absolute;
+  left: -0.95rem;
+  top: 1.25rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.experience-header h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #f5f5f7;
+}
+
+.experience-header h3 span {
+  color: #a78bfa;
+  font-weight: normal;
+  font-size: 0.95rem;
+}
+
+.experience-date {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.experience-card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
 
 
