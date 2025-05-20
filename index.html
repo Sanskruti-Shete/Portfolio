@@ -57,13 +57,37 @@
               I design & build the websites and applications people love to use
               & interact with.
             </p>
-            <a href="#contact" class="btn">Contact Me →</a>
+            <a href="#contact" class="btn">Contact Me →</a
+            ><br /><br /><br /><br />
+            <div class="typing-effect">
+              <h2><span id="typing-name"></span></h2>
+            </div>
           </div>
+
           <div class="about-image">
-            <img src="/images/img1.png" alt="..." />
+            <div class="hero-avatar">
+              <div class="avatar-ring"></div>
+              <img src="/images/img1.png" alt="Sanskruti Avatar" />
+            </div>
+
+            <div class="terminal-box">
+              <div class="terminal-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="terminal-body">
+                <p><span class="prompt">dev@sanskruti:</span>~$ whoami</p>
+                <p class="response">
+                  I’m Sanskruti — a creative frontend developer & designer
+                  passionate about elegant code and stunning UIs.
+                </p>
+                <p><span class="prompt">dev@sanskruti:</span>~$</p>
+                <span class="blinking-cursor">█</span>
+              </div>
+            </div>
           </div>
         </section>
-        <h1><span id="typing-name"></span></h1>
 
         <!-- Quote Section -->
         <section class="quote">
@@ -235,25 +259,37 @@
         </div>
 
         <!-- About Section -->
-        <section class="about">
+        <section class="about-terminal" id="about">
+          <!-- Avatar / Image -->
           <div class="about-image">
-            <img src="/images/img2.png" alt="..." />
+            <img src="/images/img2.png" alt="Sanskruti Avatar" />
           </div>
-          <div class="about-content">
-            <h2>about-me</h2>
-            <p>Hello, I'm Sanskruti!</p>
-            <p>
-              I'm a self-taught frontend developer based in Chennai, India
-              specializing in building exceptional digital experiences that
-              combine user-centric design with modern web technologies.
-            </p>
-            <p>
-              Striving to constantly improve my knowledge base, I actively
-              pursue the latest design and development trends to stay ahead of
-              the curve.
-            </p>
+
+          <!-- Terminal-styled About Content -->
+          <div class="terminal-box about-terminal-box">
+            <div class="terminal-header">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="terminal-body">
+              <p><span class="prompt">dev@sanskruti:</span>~$ cat about.txt</p>
+              <p class="response">
+                Hello, I'm Sanskruti — a self-taught frontend developer based in
+                Chennai, India 🇮🇳.<br /><br />
+                I specialize in creating exceptional digital experiences that
+                blend intuitive UI design with clean, scalable code using modern
+                web technologies.<br /><br />
+                I'm always eager to grow and explore the latest tools, trends,
+                and ideas in the world of design and development.
+              </p>
+              <p><span class="prompt">dev@sanskruti:</span>~$</p>
+              <span class="blinking-cursor">█</span>
+            </div>
           </div>
         </section>
+
+        <!--Fun Fact Box-->
         <div class="fun-fact-box">
           <p id="fun-fact-text">Click below to learn a fun fact about me!</p>
           <button id="fun-fact-btn">Show Fun Fact 🎉</button>
@@ -269,7 +305,8 @@
                 <span class="experience-date">May 2025 (ongoing) </span>
               </div>
               <p>
-                Currently working on multimodal food technology datasets and machine learning.
+                Currently working on multimodal food technology datasets and
+                machine learning.
               </p>
             </div>
 
@@ -279,7 +316,8 @@
                 <span class="experience-date">February 2024 – May 2025</span>
               </div>
               <p>
-                Worked on real world problem statements ans developed solutions for the same.
+                Worked on real world problem statements ans developed solutions
+                for the same.
               </p>
             </div>
 
