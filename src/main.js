@@ -8,6 +8,7 @@ import { initThreeCube } from './components/threeCube.js';
 import { initGitHubSnake } from './components/snake.js';
 import { initWorldClock } from './components/clock.js';
 import { initDevQuote } from './components/devQuotes.js';
+import { initChatbot } from './components/chatbot.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTypingEffect();
@@ -19,4 +20,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initGitHubSnake();
   initWorldClock();
   initDevQuote();
+  initChatbot();
 });

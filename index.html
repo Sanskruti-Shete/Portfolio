@@ -300,39 +300,44 @@
         </div>
 
         <!--Experience-->
-        <section id="experience" class="experience">
+
+        <section id="experience" class="experience-section">
           <h2 class="section-header">experience</h2>
-          <div class="experience-timeline">
-            <div class="experience-card">
-              <div class="experience-header">
-                <h3>SRIP Research Intern <span>@ VITC</span></h3>
-                <span class="experience-date">May 2025 (ongoing) </span>
+          <div class="stepper-timeline">
+            <div class="step">
+              <div class="step-icon">🎓</div>
+              <div class="step-content">
+                <h3>Research Intern @ SRIP, VITC</h3>
+                <span class="step-date">May 2025 – Ongoing</span>
+                <p>
+                  Working on machine learning applications in food tech.
+                  Handling real-world datasets and model optimization.
+                </p>
               </div>
-              <p>
-                Currently working on multimodal food technology datasets and
-                machine learning.
-              </p>
             </div>
 
-            <div class="experience-card">
-              <div class="experience-header">
-                <h3>Technical Team Member <span>@ IEE WIE</span></h3>
-                <span class="experience-date">February 2024 – May 2025</span>
+            <div class="step">
+              <div class="step-icon">💻</div>
+              <div class="step-content">
+                <h3>Technical Team @ IEEE WIE</h3>
+                <span class="step-date">Oct 2024 – Present</span>
+                <p>
+                  Built and maintained web projects for the community. Worked
+                  collaboratively on design and implementation.
+                </p>
               </div>
-              <p>
-                Worked on real world problem statements ans developed solutions
-                for the same.
-              </p>
             </div>
 
-            <div class="experience-card">
-              <div class="experience-header">
-                <h3>Cultural Team Member <span>@ MMC</span></h3>
-                <span class="experience-date">Aug 2024 - May 2025</span>
+            <div class="step">
+              <div class="step-icon">🎭</div>
+              <div class="step-content">
+                <h3>Cultural Team Member @ MMC</h3>
+                <span class="step-date">July 2024 – Present</span>
+                <p>
+                  Led event organization and creative programming for cultural
+                  activities. Focused on coordination and engagement.
+                </p>
               </div>
-              <p>
-                Organized events and nurtured my teamwork and leadership skills.
-              </p>
             </div>
           </div>
         </section>
@@ -484,6 +489,28 @@
             </a>
           </div>
         </footer>
+
+        <!--Bot-->
+        <!-- Chatbot Floating Icon -->
+        <div id="chatbot-toggle">
+          <img src="/images/pixart.png" alt="Chatbot Icon" />
+        </div>
+
+        <!-- Chatbot Panel -->
+        <div id="chatbot-panel" class="chatbot-panel hidden">
+          <div class="chatbot-header">
+            <span>Ask Me Anything 💬</span>
+            <button id="chatbot-close">✖</button>
+          </div>
+          <div id="chatbot-messages" class="chatbot-messages">
+            <div class="bot">Hi! I'm Sanskruti-bot 🤖. Ask me anything!</div>
+          </div>
+          <input
+            type="text"
+            id="chatbot-input"
+            placeholder="Type a message..."
+          />
+        </div>
       </div>
     </div>
     <script type="module" src="/src/main.js"></script>
