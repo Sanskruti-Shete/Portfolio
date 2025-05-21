@@ -1092,3 +1092,56 @@ canvas#three-cube {
 #github-snake {
   image-rendering: pixelated;
 }
+
+.footer-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 3rem 0;
+  width: 100%;
+  max-width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.card-item {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.world-clock, .quote-box {
+  background-color: #1a1a2e;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 12px rgba(167, 139, 250, 0.1);
+  font-family: 'Courier New', monospace;
+  text-align: center;
+  width: 100%;
+}
+
+#clock-time {
+  font-size: 1.5rem;
+  color: #a78bfa;
+}
+
+#dev-quote {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #a78bfa;
+}
+
+.clock-header,
+.quote-header {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #98f5c5;
+}
+@media (max-width: 768px) {
+  .card-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

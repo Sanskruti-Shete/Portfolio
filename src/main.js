@@ -6,6 +6,8 @@ import { initMusicPrompt } from './components/musicPrompt.js';
 import { initFunFactGenerator } from './components/funFact.js';
 import { initThreeCube } from './components/threeCube.js';
 import { initGitHubSnake } from './components/snake.js';
+import { initWorldClock } from './components/clock.js';
+import { initDevQuote } from './components/devQuotes.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTypingEffect();
@@ -15,4 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initFunFactGenerator();
   initThreeCube();
   initGitHubSnake();
+  initWorldClock();
+  initDevQuote();
 });
