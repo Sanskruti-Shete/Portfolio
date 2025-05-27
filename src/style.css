@@ -1210,3 +1210,15 @@ canvas#three-cube {
     visibility: hidden;
   }
 }
+
+/*Github Stats*/
+.github-stats {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.github-stats img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(167, 139, 250, 0.2);
+}
